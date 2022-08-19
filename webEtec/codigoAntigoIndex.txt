@@ -1,0 +1,86 @@
+<?php
+include('cabecalho.php');
+include('menu.php');
+
+include("conexao.php");
+
+
+
+?>
+
+<!-- https://developers.google.com/chart/interactive/docs/quick_start
+
+<--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+
+
+ <?php
+     $stmt3 = $pdo->prepare("select COUNT(idCategoria)from tbCategoria");
+     $stmt3->execute();
+    $row3 = $stmt->fetch(PDO::FETCH_BOTH);
+?>
+<p class="cate"><b><?php echo "Total de Categoria: $row[0] "; ?> </b></p>
+
+    function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+            echo ($row3[0]); 
+        ]);
+
+     
+
+        // Set chart options
+        var options = {
+            'title': "Produtos Cadastrados",
+            'width': 700,
+            'height': 500
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+</script>
+
+
+<section>
+
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+
+    <?php
+    $stmt = $pdo->prepare("select count(*) from tbProduto");
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_NUM);
+    echo "Total de produtos: $row[0]";
+    ?>
+
+    <?php
+    $stmt2 = $pdo->prepare("select sum(valor) from tbProduto");
+    $stmt2->execute();
+    $row2 = $stmt2->fetch(PDO::FETCH_NUM);
+    echo "Soma dos valores dos produtos: $row2[0]";
+    ?>
+
+</section> -->
+
+
+
+
+<?php include("rodape.php")  ?>

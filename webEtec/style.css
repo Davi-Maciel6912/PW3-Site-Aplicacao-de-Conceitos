@@ -1,0 +1,142 @@
+body{
+    /* background: linear-gradient(0deg, rgba(0,224,255,1) 0%, rgba(130,240,255,1) 1%, rgba(255,255,255,1) 96%) no-repeat; */
+    background-image: url("img/cor.png");
+    
+}
+
+.title{
+    color: #59b4e2;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.title2{
+    color: #59b4e2;
+    text-align: center;
+    margin-top: 30px;
+
+    
+}
+
+.container{
+    text-align: center; 
+}
+.btn{
+    margin-top: 10px;
+    background: #fff;
+}
+
+.btn:hover{
+    box-shadow: 6px 6px 0px #59b4e2;
+}
+
+.select{
+    width: 120px;
+    height: 32px;
+    border-radius: 5px;
+    border-color: #59b4e2;
+    border-width: 2px;
+
+}
+
+.campo{
+    border-radius: 5px;
+    border-color: #59b4e2;
+    
+}
+.campo1{
+    border-radius: 5px;
+    border-color: #59b4e2;
+    margin-top: 30px;
+    
+}
+
+.cate{
+   margin-top: 25px;
+  
+}
+
+.pro1{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pro2{
+
+    text-align: center;
+}
+
+.centro{
+    padding: relative;
+    margin-top: 100px;
+    margin-left: 25px;
+}
+
+.grafico1{
+    margin-right: 170px;   
+}
+
+
+
+
+
+
+
+.container1{
+    text-align: center;
+    margin-top: 15%;
+    height: 400px;
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 15px;
+    border: 0px solid rgb(180, 180, 180);
+    -webkit-box-shadow: 14px 1px 15px 2px rgba(0,0,0,0.19); 
+    box-shadow: 14px 1px 15px 2px rgba(0,0,0,0.19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+          -60deg, 
+          rgb(104, 248, 229) 0%, 
+          rgb(143, 252, 252) 25%, 
+          rgb(255, 255, 255) 51%, 
+          rgb(255, 255, 255) 100%
+    );  
+    animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+h4{
+margin-top: 20px;
+}
+
+
+.campo2{
+    outline: none;
+    margin-left: 30px;
+    text-decoration: none;
+    background: none;
+    border-radius: 5px;
+    border-color: #59b4e2;
+    margin-top: 30px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.link{
+    color: #38a8e0;
+    
+}
+
+.link:hover{
+    color: #38a8e0;
+}
